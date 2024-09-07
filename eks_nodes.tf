@@ -8,7 +8,7 @@ resource "aws_eks_node_group" "node-grp" {
   instance_types  = ["t2.medium"]
 
   remote_access {
-    ec2_ssh_key               = "keypait"
+    ec2_ssh_key               = "keypair"
     source_security_group_ids = [aws_security_group.private_sg]
   }
 
