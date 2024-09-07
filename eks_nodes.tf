@@ -2,14 +2,14 @@ resource "aws_eks_node_group" "node-grp" {
   cluster_name    = aws_eks_cluster.eks.name
   node_group_name = "node-group"
   node_role_arn   = aws_iam_role.worker.arn
-  subnet_ids      = [aws_subnet.private_subnet_1, aws_subnet.private_subnet_2]
+  subnet_ids      = [aws_subnet.private_subnet_1.id, aws_subnet.private_subnet_2.id]
   capacity_type   = "ON_DEMAND"
   disk_size       = "20"
   instance_types  = ["t2.medium"]
 
   remote_access {
     ec2_ssh_key               = "keypair"
-    source_security_group_ids = [aws_security_group.private_sg]
+    source_security_group_ids = [aws_security_group.private_sg.id]
   }
 
   labels = tomap({ env = "dev" })

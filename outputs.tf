@@ -6,12 +6,12 @@ output "private_subnet_1_id" {
   value = aws_subnet.private_subnet_1.id
 }
 
-output "public_instance_id" {
-  value = aws_instance.public_instance.id
+output "public_subnet_2_id" {
+  value = aws_subnet.public_subnet_2.id
 }
 
-output "private_instance_id" {
-  value = aws_instance.private_instance.id
+output "private_subnet_2_id" {
+  value = aws_subnet.private_subnet_2.id
 }
 
 output "eks_cluster_name" {
