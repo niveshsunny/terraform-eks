@@ -1,5 +1,8 @@
 resource "aws_vpc" "main" {
   cidr_block = var.cidr_block
+  tags = {
+    "Name" = "my-vpc"
+  }
 }
 
 resource "aws_key_pair" "example" {
