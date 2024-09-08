@@ -11,7 +11,12 @@ resource "aws_eks_node_group" "node-grp" {
     ec2_ssh_key               = "keypair"
     source_security_group_ids = [aws_security_group.public_sg.id]
   }
-
+  
+  tags = {
+    Name = "worker-nodes"
+    Environment = "Development"
+  }
+  
   labels = tomap({ env = "dev" })
 
   scaling_config {
