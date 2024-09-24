@@ -59,7 +59,7 @@ This project demonstrates the creation of an EKS cluster in a private VPC using 
 
 ## Architecture Diagram
 
-*(Add an architecture diagram here if you have one)*
+![Alt text]( https://res.cloudinary.com/practicaldev/image/fetch/s--n_cbMy3c--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/cp8bxvvknzy6k7js7bi4.png)
 
 ## Notes
 
